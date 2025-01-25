@@ -67,3 +67,30 @@ Medium Priority
 Low Priority  
 1000, 1001, 1002, 1026, 19, 20, 21  
 
+
+Top 25 Windows Event IDs for SOC Analyst 
+1. 4624 – Successful Logon
+2. 4625 – Failed Logon
+3. 4648 – Logon Attempt Using Explicit Credentials
+4. 4672 – Special Privileges Assigned to New Logon
+5. 4634 – Logoff
+6. 4688 – A New Process Has Been Created
+7. 4689 – A Process Has Ended
+8. 5156 – Windows Filtering Platform Connection Allowed
+9. 5158 – Windows Filtering Platform Connection Blocked 
+10. 1102 – Audit Log Cleared 
+11. 4720 – User Account Created 
+12. 4726 – User Account Deleted 
+13. 4732 – Member Added to Security-Enabled Local Group 
+14. 4738 – User Account Changed 
+15. 4740 – User Account Locked Out 
+16. 4756 – Member Added to Security-Enabled Global Group 
+17. 4768 – Kerberos TGT Requested 
+18. 4769 – Kerberos Service Ticket Requested 
+19. 4776 – Credentials Validation Attempted 
+20. 4798 – User’s Local Group Membership Enumerated 
+21. 5140 – Network Share Accessed 
+22. 5152 – Connection Blocked by WFP 
+23. 5058 – KDC Service Stopped 
+24. 4703 – User Right Assigned 
+25. Event ID 4743 – Computer Account Moved 
