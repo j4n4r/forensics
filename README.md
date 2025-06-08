@@ -10,6 +10,7 @@ https://github.com/VirusTotal/yara
 ## Windows
 AD Security https://adsecurity.org/
 DeepBlueCli https://github.com/sans-blue-team/DeepBlueCLI
+MichaelHaag https://asrgen.streamlit.app/
 
 ## COMPROMISED WINDOWS MACHINE PLAYBOOK:
 ### Event log analysis and monitoring
