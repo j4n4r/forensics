@@ -1,16 +1,16 @@
 # Various forensics tools
 
 ## Collections
-John Hammond collection: https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/navigation.md
+- John Hammond collection: https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/navigation.md
 
 ## Forensics
-https://github.com/VirusTotal/yara
+- https://github.com/VirusTotal/yara
 
 
 ## Windows
-AD Security https://adsecurity.org/
-DeepBlueCli https://github.com/sans-blue-team/DeepBlueCLI
-MichaelHaag https://asrgen.streamlit.app/
+- AD Security https://adsecurity.org/
+- DeepBlueCli https://github.com/sans-blue-team/DeepBlueCLI
+- MichaelHaag https://asrgen.streamlit.app/
 
 ## COMPROMISED WINDOWS MACHINE PLAYBOOK:
 ### Event log analysis and monitoring
