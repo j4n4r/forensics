@@ -13,6 +13,56 @@
 - MichaelHaag https://asrgen.streamlit.app/
 
 ## COMPROMISED WINDOWS MACHINE PLAYBOOK:
+### Network connections review
+#### Check DNS resolver cache  
+```
+ipconfig /displaydns  
+```
+
+#### Check Established connections
+```
+Get-NetTCPConnection | Where-Object {$_.State -eq "Established"}  
+```
+
+Or simple version: 
+```
+netstat -ano | Select-String "ESTABLISHED"  
+```
+
+#### Check for listening connections
+```
+Get-NetTCPConnection -State Listen | ForEach-Object {
+    try {
+        $proc = Get-Process -Id $_.OwningProcess
+        [PSCustomObject]@{
+            LocalAddress  = $_.LocalAddress
+            LocalPort     = $_.LocalPort
+            ProcessName   = $proc.ProcessName
+            PID           = $_.OwningProcess
+        }
+    } catch {
+        [PSCustomObject]@{
+            LocalAddress  = $_.LocalAddress
+            LocalPort     = $_.LocalPort
+            ProcessName   = "Unknown"
+            PID           = $_.OwningProcess
+        }
+    }
+} | Sort-Object LocalPort | Format-Table -AutoSize
+```
+
+#### For suspicious IP-s
+```
+nslookup xx.xx.xx.xx
+```
+
+### Accounts and privileges
+```
+whoami \priv
+```
+
+Look for `SeDebugPrivilege` and `SeImpersonatePrivilege` privileges. Non-admin accounts should not normally have this.
+
 ### Event log analysis and monitoring
 
 #### High Priority (Critical Monitoring)
